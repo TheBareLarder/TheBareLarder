@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-honey-pale text-ink;
+  }
+}
+
+@layer utilities {
+  /** Large display heading — used for section pull-quotes */
+  .text-display-hook {
+    @apply font-serif font-normal tracking-tight text-forest;
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.02;
+  }
+
+  /** Hero headline scale */
+  .text-hero {
+    font-size: clamp(3.25rem, 9vw, 6.5rem);
+    line-height: 0.97;
+  }
+
+  .text-balance-safe {
+    text-wrap: balance;
+  }
+
+  /** Very subtle grain — layered inside individual sections */
+  .bg-noise-faint {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+
+  /** Eyebrow label — on light backgrounds */
+  .section-eyebrow {
+    @apply flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-forest-light;
+  }
+
+  .section-eyebrow::before {
+    content: "";
+    @apply h-px w-8 shrink-0 bg-honey/60;
+  }
+
+  /** Eyebrow label — on dark/forest backgrounds */
+  .section-eyebrow-light {
+    @apply flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-honey;
+  }
+
+  .section-eyebrow-light::before {
+    content: "";
+    @apply h-px w-8 shrink-0 bg-honey/40;
+  }
+}
