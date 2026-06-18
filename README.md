@@ -20,7 +20,9 @@ pnpm start        # or: pnpm preview (build + start in one step)
 
 ## Deploy
 
-Connect the repo to [Vercel](https://vercel.com). It auto-detects Next.js — no configuration needed. Every push to `main` deploys automatically.
+Hosted on [Vercel](https://vercel.com) (Hobby). The repo is linked for automatic deploys — push to `main` and Vercel builds with Next.js, no extra config.
+
+**Deployment hygiene:** deployments are set to expire after about 30 days without a fresh build. That keeps old URLs tidy, but a quiet repo can look offline until something is deployed again. Push any change to `main`, or redeploy from the Vercel dashboard, to publish a new build.
 
 ## Project structure
 
