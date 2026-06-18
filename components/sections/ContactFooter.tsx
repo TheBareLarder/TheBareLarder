@@ -4,37 +4,31 @@ export function ContactFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-forest-deep text-stone">
-      <div className="mx-auto max-w-content px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
-          {/* Brand identity */}
+    <footer id="contact" className="bg-ink-deep text-cream">
+      <div className="mx-auto max-w-content px-5 py-[72px] sm:px-8 lg:px-10">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 pb-14 border-b border-cream/[0.08]">
+          {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest">
-                <span className="font-serif text-xs font-normal tracking-[0.12em] text-stone/90">
-                  BL
-                </span>
-              </span>
-              <span className="font-serif text-lg tracking-[0.12em] text-stone">
-                {brand.name}
-              </span>
-            </div>
-            <p className="mt-4 max-w-xs font-sans text-sm font-medium leading-relaxed text-stone/55">
-              {brand.tagline} Christchurch-made tallow chips.
+            <p className="font-display text-[40px] tracking-[0.06em] text-cream leading-none mb-3">
+              {brand.name.toUpperCase()}
+            </p>
+            <p className="font-sans text-[13px] font-medium leading-relaxed text-cream/38 max-w-[200px]">
+              {brand.tagline} Three ingredients. Proudly made in Christchurch,
+              New Zealand.
             </p>
           </div>
 
-          {/* Site nav */}
+          {/* Nav */}
           <div>
-            <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-honey/70">
+            <p className="font-sans text-[10px] font-extrabold tracking-[0.25em] uppercase text-cream/22 mb-5">
               Menu
             </p>
-            <ul className="mt-5 space-y-3">
+            <ul className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-sans text-sm font-medium text-stone/65 transition-colors hover:text-stone"
+                    className="font-sans text-[13px] font-medium text-cream/42 hover:text-cream/90 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -43,17 +37,17 @@ export function ContactFooter() {
             </ul>
           </div>
 
-          {/* Social / contact */}
+          {/* Connect */}
           <div>
-            <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-honey/70">
+            <p className="font-sans text-[10px] font-extrabold tracking-[0.25em] uppercase text-cream/22 mb-5">
               Connect
             </p>
-            <ul className="mt-5 space-y-3">
+            <ul className="flex flex-col gap-3">
               {socialLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-sans text-sm font-medium text-stone/65 transition-colors hover:text-honey"
+                    className="font-sans text-[13px] font-medium text-cream/42 hover:text-cream/90 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -64,11 +58,11 @@ export function ContactFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col gap-2 border-t border-forest-mid/50 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-sans text-sm text-stone/35">
-            © {year} {brand.name}. Made in Christchurch, New Zealand.
+        <div className="flex flex-wrap gap-4 justify-between items-center pt-6">
+          <p className="font-sans text-[12px] text-cream/20">
+            © {year} Tauros. Made in Christchurch, New Zealand.
           </p>
-          <p className="font-sans text-xs uppercase tracking-wider text-stone/25">
+          <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-cream/14">
             NZ Food Safety Compliant
           </p>
         </div>

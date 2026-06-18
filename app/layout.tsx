@@ -1,33 +1,39 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Nunito_Sans } from "next/font/google";
+import { Bebas_Neue, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-/** Display serif — soft/wonk axes read craft, market-day, a little playful. */
-const headingFont = Fraunces({
+/**
+ * Bebas Neue — condensed display typeface.
+ * Matches the product label's bold block-letter identity.
+ */
+const displayFont = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-heading",
+  weight: "400",
+  variable: "--font-display",
   display: "swap",
-  axes: ["SOFT", "WONK"],
 });
 
-/** Rounded humanist sans — warmer and more “table” than geometric UI faces. */
+/**
+ * Nunito Sans — warm humanist sans for body copy.
+ * Keeps the brand approachable without softening it.
+ */
 const bodyFont = Nunito_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "Bare Larder | The chip, reimagined.",
+  title: "Tauros | The Original Beef Tallow Crisps",
   description:
-    "Christchurch tallow chips from our kitchen: taste tested with family and friends for flavour and crunch, sold at weekend markets, made to New Zealand food safety standards.",
+    "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients, nothing else. Made in Christchurch, New Zealand.",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0F2318",
+  themeColor: "#1A1A18",
 };
 
 export default function RootLayout({
@@ -36,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-NZ" className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html
+      lang="en-NZ"
+      className={`${displayFont.variable} ${bodyFont.variable}`}
+    >
       <body className="font-sans text-base">{children}</body>
     </html>
   );

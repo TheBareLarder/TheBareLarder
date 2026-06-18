@@ -4,7 +4,7 @@ import { FindUs } from "@/components/sections/FindUs";
 import { Hero } from "@/components/sections/Hero";
 import { Products } from "@/components/sections/Products";
 import { SiteHeader } from "@/components/sections/SiteHeader";
-import { WhyTallow } from "@/components/sections/WhyTallow";
+import { ThreeIngredients } from "@/components/sections/ThreeIngredients";
 
 export default function HomePage() {
   return (
@@ -12,7 +12,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
-        <WhyTallow />
+        <ThreeIngredients />
         <About />
         <Products />
         <FindUs />

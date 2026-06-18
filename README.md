@@ -1,6 +1,6 @@
-# Bare Larder
+# Tauros
 
-Marketing site for Bare Larder — a Christchurch family business selling tallow chips at weekend markets.
+Marketing site for Tauros — the original beef tallow crisps, made in Christchurch, New Zealand.
 
 Built with **Next.js 15 (App Router)**, **Tailwind CSS 3**, and **TypeScript**. Statically generated, no database.
 
@@ -26,7 +26,7 @@ Connect the repo to [Vercel](https://vercel.com). It auto-detects Next.js — no
 
 ```
 app/
-  layout.tsx        # root layout, fonts (Fraunces + Nunito Sans), metadata
+  layout.tsx        # root layout, fonts (Bebas Neue + Nunito Sans), metadata
   page.tsx          # assembles all sections
   globals.css       # Tailwind base, custom utility classes
 
@@ -34,26 +34,26 @@ components/
   sections/         # one file per page section (top to bottom)
     SiteHeader.tsx
     Hero.tsx
-    WhyTallow.tsx
+    ThreeIngredients.tsx
     About.tsx
     Products.tsx
     FindUs.tsx
     ContactFooter.tsx
-  resources/        # imported image assets
+  resources/        # imported image assets (e.g. TaurosLogo.png)
 
 content/
-  site.ts           # all copy, product data, market info, social links
+  site.ts           # all copy, products, nutrition, markets, social links
 
-tailwind.config.ts  # colour system: forest / honey / stone / clay / ink
+tailwind.config.ts  # colour system: ink / kraft / cream
 ```
 
 ## Content
 
 Everything the marketing copy team needs to edit lives in [`content/site.ts`](content/site.ts):
+
 - Brand name and tagline
-- Nav links
+- Nav links and credential badges
+- Nutrition panel data
 - Product list (title, description, badge)
 - Market locations and external links
 - Social / contact links
-
-To add a hero video, set `heroVideoSrc` in that file to a path in `/public` (e.g. `/hero-chips.mp4`).

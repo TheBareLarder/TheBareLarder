@@ -6,56 +6,49 @@
   html {
     scroll-behavior: smooth;
   }
-
   body {
-    @apply bg-stone text-ink antialiased;
+    @apply bg-cream text-ink antialiased;
   }
-
   ::selection {
-    @apply bg-honey-pale text-ink;
+    @apply bg-kraft text-ink;
   }
 }
 
 @layer utilities {
-  /** Large display heading — used for section pull-quotes */
-  .text-display-hook {
-    @apply font-serif font-normal tracking-tight text-forest;
-    font-size: clamp(2.25rem, 6vw, 4.5rem);
-    line-height: 1.02;
-  }
-
-  /** Hero headline scale */
-  .text-hero {
-    font-size: clamp(3.25rem, 9vw, 6.5rem);
-    line-height: 0.97;
-  }
-
-  .text-balance-safe {
-    text-wrap: balance;
-  }
-
-  /** Very subtle grain — layered inside individual sections */
-  .bg-noise-faint {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
-  }
-
-  /** Eyebrow label — on light backgrounds */
+  /* Section eyebrow — condensed uppercase label */
   .section-eyebrow {
-    @apply flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-forest-light;
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    opacity: 0.35;
   }
 
-  .section-eyebrow::before {
-    content: "";
-    @apply h-px w-8 shrink-0 bg-honey/60;
+  /* Display heading scale — for major section titles */
+  .text-display {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 9vw, 96px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
   }
 
-  /** Eyebrow label — on dark/forest backgrounds */
-  .section-eyebrow-light {
-    @apply flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-honey;
+  /* Primary CTA — flat black button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-sans text-[11px] font-extrabold tracking-[0.18em] uppercase text-cream bg-ink px-[30px] py-[15px] border-2 border-ink transition-opacity hover:opacity-90 active:opacity-80;
   }
 
-  .section-eyebrow-light::before {
-    content: "";
-    @apply h-px w-8 shrink-0 bg-honey/40;
+  /* Outline CTA */
+  .btn-outline {
+    @apply inline-flex items-center justify-center font-sans text-[11px] font-extrabold tracking-[0.18em] uppercase text-ink bg-transparent px-[30px] py-[15px] border-2 border-ink transition-colors hover:bg-ink/[0.06];
+  }
+
+  /* Circular credential badge */
+  .credential-badge {
+    @apply w-[88px] h-[88px] rounded-full bg-ink shrink-0 flex items-center justify-center p-3;
+  }
+
+  /* Grain texture — applied to kraft sections */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
 }

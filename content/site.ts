@@ -1,42 +1,61 @@
-/** Central copy and placeholders — extend as the brand grows. */
+/** Central copy — Tauros beef tallow crisps. */
 
 export const brand = {
-  name: "Bare Larder",
-  tagline: "Just the good stuff.",
+  name: "Tauros",
+  tagline: "Bullish About Flavour.",
+  description:
+    "The Original Beef Tallow Crisps. Made in Christchurch, New Zealand.",
 } as const;
 
-/** Set to a file in `/public` (e.g. `/hero-chips.mp4`) when the hero clip is ready. */
-export const heroVideoSrc: string | null = null;
-
 export const navLinks = [
-  { href: "#why-tallow", label: "Why tallow?" },
-  { href: "#about", label: "Our story" },
+  { href: "#about", label: "Our Story" },
   { href: "#products", label: "Products" },
-  { href: "#find-us", label: "Find us" },
+  { href: "#find-us", label: "Find Us" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
+/**
+ * Credential badges — rendered in the Hero and About sections.
+ * `lines` is a newline-separated string for the badge text display.
+ */
+export const credentials = [
+  { id: "no-seed-oils", label: "No Seed Oils", lines: "NO\nSEED\nOILS" },
+  { id: "non-gmo", label: "Non-GMO", lines: "NON\nGMO" },
+  { id: "grass-fed", label: "100% Grass-Fed", lines: "100%\nGRASS\nFED" },
+] as const;
+
+export const nutrition = {
+  servingsPerPackage: 2,
+  servingSize: "50 g",
+  rows: [
+    { nutrient: "Energy", perServing: "361 kJ", per100g: "723 kJ" },
+    { nutrient: "Protein", perServing: "2.3 g", per100g: "4.6 g" },
+    { nutrient: "Fat, total", perServing: "3.8 g", per100g: "7.5 g" },
+    { nutrient: "Saturated", perServing: "1.8 g", per100g: "3.7 g", indent: true },
+    { nutrient: "Carbohydrate", perServing: "16.2 g", per100g: "32.3 g" },
+    { nutrient: "Sugars", perServing: "0.3 g", per100g: "0.6 g", indent: true },
+    { nutrient: "Sodium", perServing: "21 mg", per100g: "42 mg" },
+  ],
+} as const;
+
 export const products = [
   {
-    id: "chips-lightly-salted",
-    title: "Lightly salted tallow chips",
+    id: "natural-sea-salt",
+    title: "Natural Sea Salt",
+    size: "100g",
     description:
-      "Agria potatoes fried in NZ beef tallow, with salt kept light so the potato and the fat do more of the talking.",
-    badge: "Core range",
+      "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients. That is it.",
+    badge: "Available Now",
+    available: true,
   },
   {
-    id: "chips-salted",
-    title: "Salted tallow chips",
+    id: "more-flavours",
+    title: "More Flavours",
+    size: "Coming Soon",
     description:
-      "Same cook and same tallow, with a heavier hand on the salt for a straight-up chip-shop hit.",
-    badge: "Core range",
-  },
-  {
-    id: "flavours-research",
-    title: "More flavours",
-    description:
-      "We are trying other seasonings and blends on the bench. Nothing we are ready to name or sell yet, just honest R&D.",
-    badge: "Under research",
+      "Working through options on the bench. Nothing named yet — we cook it until it earns its spot.",
+    badge: "In Development",
+    available: false,
   },
 ] as const;
 
@@ -44,23 +63,27 @@ export const markets = [
   {
     id: "lyttelton-farmers-market",
     name: "Lyttelton Farmers Market",
+    schedule: "Saturday mornings · 10am–1pm",
+    location: "London Street, Lyttelton, Christchurch",
     detail:
-      "Likely one of our first stalls when we open. We do not have our own trading dates yet. The market is Saturday mornings, 10am to 1pm, on London Street, Lyttelton.",
+      "One of our first stalls. Trading dates still TBC — follow us on Facebook for updates.",
     infoHref: "https://www.lytteltoninfocentre.nz/lyttelton-farmers-market",
     infoLabel: "Lyttelton Info Centre",
   },
   {
     id: "ferrymead-night-market",
     name: "Ferrymead Night Market",
+    schedule: "Stall dates TBC",
+    location: "Ferrymead, Christchurch",
     detail:
-      "We are also planning to trade at Ferrymead night markets as we get going. Our stall dates are still TBC; the council page has the current schedule for the market itself.",
-    infoHref: "https://ccc.govt.nz/news-and-events/whats-on/event/ferrymead-night-market-11",
+      "Also planning to trade here as we get going. Check the council page for the current market schedule.",
+    infoHref:
+      "https://ccc.govt.nz/news-and-events/whats-on/event/ferrymead-night-market-11",
     infoLabel: "Christchurch City Council",
   },
 ] as const;
 
 export const socialLinks = [
-  { href: "#", label: "Instagram" },
-  { href: "#", label: "Facebook" },
-  { href: "#", label: "Email" },
+  { href: "https://www.facebook.com", label: "Facebook" },
+  { href: "mailto:hello@tauros.co.nz", label: "Email" },
 ] as const;
