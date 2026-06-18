@@ -1,5 +1,5 @@
 import Image from "next/image";
-import taurosLogoSrc from "@/components/resources/TaurosLogo.png";
+import taurosBrandSrc from "@/components/resources/TaurosBR.png";
 import { brand, navLinks } from "@/content/site";
 
 export function SiteHeader() {
@@ -12,11 +12,11 @@ export function SiteHeader() {
           aria-label={`${brand.name} — go to top`}
         >
           <Image
-            src={taurosLogoSrc}
+            src={taurosBrandSrc}
             alt={brand.name}
             width={444}
             height={299}
-            className="h-10 w-auto block"
+            className="h-9 w-auto block brightness-0 invert opacity-90"
             priority
           />
         </a>
