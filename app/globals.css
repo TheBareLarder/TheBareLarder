@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #1a1a18;
+  --color-ink-deep: #111110;
+  --color-ink-mid: #2a2520;
+  --color-ink-muted: #6b6158;
+  --color-ink-pale: #a89e95;
+  --color-kraft: #ede1c1;
+  --color-kraft-warm: #f0e8d0;
+  --color-kraft-light: #f8f4ec;
+  --color-kraft-border: #c8bfa5;
+  --color-cream: #fefcf7;
+  --color-cream-warm: #faf7f0;
+
+  --font-display: var(--font-display-family), Impact, sans-serif;
+  --font-sans: var(--font-body-family), system-ui, sans-serif;
+
+  --max-width-content: 75rem;
+  --shadow-stamp: 8px 8px 0 rgba(26, 26, 24, 0.12);
+  --shadow-stamp-sm: 4px 4px 0 rgba(26, 26, 24, 0.09);
+}
 
 @layer base {
   html {
@@ -15,39 +34,33 @@
 }
 
 @layer utilities {
-  /* Section eyebrow — condensed uppercase label */
   .section-eyebrow {
-    font-family: var(--font-display);
+    font-family: var(--font-display-family), Impact, sans-serif;
     font-size: 13px;
     letter-spacing: 0.45em;
     text-transform: uppercase;
     opacity: 0.35;
   }
 
-  /* Display heading scale — for major section titles */
   .text-display {
-    font-family: var(--font-display);
+    font-family: var(--font-display-family), Impact, sans-serif;
     font-size: clamp(52px, 9vw, 96px);
     line-height: 0.9;
     letter-spacing: 0.02em;
   }
 
-  /* Primary CTA — flat black button */
   .btn-primary {
     @apply inline-flex items-center justify-center font-sans text-[11px] font-extrabold tracking-[0.18em] uppercase text-cream bg-ink px-[30px] py-[15px] border-2 border-ink transition-opacity hover:opacity-90 active:opacity-80;
   }
 
-  /* Outline CTA */
   .btn-outline {
-    @apply inline-flex items-center justify-center font-sans text-[11px] font-extrabold tracking-[0.18em] uppercase text-ink bg-transparent px-[30px] py-[15px] border-2 border-ink transition-colors hover:bg-ink/[0.06];
+    @apply inline-flex items-center justify-center font-sans text-[11px] font-extrabold tracking-[0.18em] uppercase text-ink bg-transparent px-[30px] py-[15px] border-2 border-ink transition-colors hover:bg-ink/6;
   }
 
-  /* Circular credential badge */
   .credential-badge {
     @apply w-[88px] h-[88px] rounded-full bg-ink shrink-0 flex items-center justify-center p-3;
   }
 
-  /* Grain texture — applied to kraft sections */
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }

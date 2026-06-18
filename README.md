@@ -2,7 +2,7 @@
 
 Marketing site for Tauros — the original beef tallow crisps, made in Christchurch, New Zealand.
 
-Built with **Next.js 15 (App Router)**, **Tailwind CSS 3**, and **TypeScript**. Statically generated, no database.
+Built with **Next.js 16 (App Router)**, **Tailwind CSS 4**, and **TypeScript**. Statically generated, no database.
 
 ## Local development
 
@@ -35,6 +35,7 @@ components/
     SiteHeader.tsx
     Hero.tsx
     ThreeIngredients.tsx
+    NutritionInfo.tsx
     About.tsx
     Products.tsx
     FindUs.tsx
@@ -44,7 +45,7 @@ components/
 content/
   site.ts           # all copy, products, nutrition, markets, social links
 
-tailwind.config.ts  # colour system: ink / kraft / cream
+app/globals.css     # Tailwind v4 theme (ink / kraft / cream) and utilities
 ```
 
 ## Content

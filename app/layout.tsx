@@ -9,7 +9,7 @@ import "./globals.css";
 const displayFont = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-display",
+  variable: "--font-display-family",
   display: "swap",
 });
 
@@ -19,7 +19,7 @@ const displayFont = Bebas_Neue({
  */
 const bodyFont = Nunito_Sans({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-body-family",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -27,7 +27,7 @@ const bodyFont = Nunito_Sans({
 export const metadata: Metadata = {
   title: "Tauros | The Original Beef Tallow Crisps",
   description:
-    "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients, nothing else. Made in Christchurch, New Zealand.",
+    "Agria potatos fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients, nothing else. Made in Christchurch, New Zealand.",
 };
 
 export const viewport: Viewport = {
@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-NZ"
+      data-scroll-behavior="smooth"
       className={`${displayFont.variable} ${bodyFont.variable}`}
     >
       <body className="font-sans text-base">{children}</body>

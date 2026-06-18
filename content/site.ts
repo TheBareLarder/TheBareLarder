@@ -31,7 +31,12 @@ export const nutrition = {
     { nutrient: "Energy", perServing: "361 kJ", per100g: "723 kJ" },
     { nutrient: "Protein", perServing: "2.3 g", per100g: "4.6 g" },
     { nutrient: "Fat, total", perServing: "3.8 g", per100g: "7.5 g" },
-    { nutrient: "Saturated", perServing: "1.8 g", per100g: "3.7 g", indent: true },
+    {
+      nutrient: "Saturated",
+      perServing: "1.8 g",
+      per100g: "3.7 g",
+      indent: true,
+    },
     { nutrient: "Carbohydrate", perServing: "16.2 g", per100g: "32.3 g" },
     { nutrient: "Sugars", perServing: "0.3 g", per100g: "0.6 g", indent: true },
     { nutrient: "Sodium", perServing: "21 mg", per100g: "42 mg" },
@@ -44,7 +49,7 @@ export const products = [
     title: "Natural Sea Salt",
     size: "100g",
     description:
-      "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients. That is it.",
+      "Agria potatos fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients. That is it.",
     badge: "Available Now",
     available: true,
   },

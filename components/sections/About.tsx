@@ -7,10 +7,7 @@ export function About() {
     >
       <div className="mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-28 lg:px-10">
         <p className="section-eyebrow text-ink">OUR STORY</p>
-        <h2
-          id="about-heading"
-          className="text-display text-ink mt-2"
-        >
+        <h2 id="about-heading" className="text-display text-ink mt-2">
           FROM OUR KITCHEN
           <br className="hidden sm:inline" />
           TO THE STALL
@@ -21,15 +18,14 @@ export function About() {
           <div>
             <div className="flex flex-col gap-5">
               <p className="font-sans text-[17px] font-medium leading-[1.72] text-ink-mid">
-                Tauros started in our Christchurch kitchen. Fed up with oils
-                that had no business being in food, we went back to what worked:
-                potatoes fried in proper beef fat, finished with sea salt.
+                Tauros started in our Christchurch kitchen. Fed up with boring
+                seed oils , we went back to what worked: potatos fried in proper
+                beef fat, finished with sea salt.
               </p>
               <p className="font-sans text-[17px] font-medium leading-[1.72] text-ink-mid">
                 The cook time and the seasoning only settled once we had run
                 enough bags past family and friends. We were chasing a clear
-                flavour and a crunch we could repeat — not a clever line on a
-                packet.
+                flavour and a crunch we could repeat.
               </p>
               <p className="font-sans text-[17px] font-medium leading-[1.72] text-ink-mid">
                 The homemade energy matters to us, but so does the paperwork —
@@ -52,7 +48,7 @@ export function About() {
                 ZEALAND
               </p>
               <p className="font-sans text-[12px] font-semibold tracking-[0.12em] uppercase text-ink/45 mt-3.5">
-                Christchurch · Est. 2024
+                Christchurch · Est. 2026
               </p>
             </div>
             <div className="border-2 border-ink p-8 bg-cream">
