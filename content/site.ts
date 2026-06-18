@@ -49,7 +49,7 @@ export const products = [
     title: "Natural Sea Salt",
     size: "100g",
     description:
-      "Agria potatos fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients. That is it.",
+      "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients. That is it.",
     badge: "Available Now",
     available: true,
   },

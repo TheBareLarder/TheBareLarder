@@ -19,7 +19,7 @@ export function About() {
             <div className="flex flex-col gap-5">
               <p className="font-sans text-[17px] font-medium leading-[1.72] text-ink-mid">
                 Tauros started in our Christchurch kitchen. Fed up with boring
-                seed oils , we went back to what worked: potatos fried in proper
+                seed oils , we went back to what worked: potatoes fried in proper
                 beef fat, finished with sea salt.
               </p>
               <p className="font-sans text-[17px] font-medium leading-[1.72] text-ink-mid">

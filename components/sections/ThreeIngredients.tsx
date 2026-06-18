@@ -18,7 +18,7 @@ export function ThreeIngredients() {
           ONLY 3 INGREDIENTS
         </h2>
         <p className="font-sans text-[clamp(13px,1.8vw,17px)] font-bold tracking-[0.3em] uppercase text-cream/55 mt-5">
-          Potatos · Beef Tallow · Sea Salt
+          Potatoes · Beef Tallow · Sea Salt
         </p>
         <p className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-cream/20 mt-2">
           Allergens: None

@@ -27,7 +27,7 @@ const bodyFont = Nunito_Sans({
 export const metadata: Metadata = {
   title: "Tauros | The Original Beef Tallow Crisps",
   description:
-    "Agria potatos fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients, nothing else. Made in Christchurch, New Zealand.",
+    "Agria potatoes fried in 100% grass-fed NZ beef tallow, finished with natural sea salt. Three ingredients, nothing else. Made in Christchurch, New Zealand.",
 };
 
 export const viewport: Viewport = {
